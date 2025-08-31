@@ -1,0 +1,58 @@
+.navbar-myedit {
+    background: rgb(17, 24, 39);
+    min-height: 64px;
+    display: flex;
+    align-items: center;
+}
+
+.menu-myedit {
+    display: flex;
+    align-items: center;
+    margin-right: 5%;
+
+}
+
+.active-menu {
+    background: rgba(255,255,255,0.15) !important;
+    color: #fff !important;
+    border-radius: 8px !important;
+    font-weight: bold !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10) !important;
+    padding: 4px 16px !important;
+    border-bottom: 2px solid #fff !important;
+    transition: background 0.2s, box-shadow 0.2s !important;
+    border: none !important;
+}
+
+.navbar-toggler {
+    background: #1e293b !important;
+    border: 2px solid #2563eb !important;
+    border-radius: 8px !important;
+    padding: 8px 14px !important;
+    box-shadow: 0 2px 8px rgba(30,41,59,0.10);
+    transition: background 0.2s, box-shadow 0.2s;
+}
+.navbar-toggler:hover, .navbar-toggler:focus {
+    background: #2563eb !important;
+    border-color: #1e293b !important;
+    box-shadow: 0 4px 16px rgba(37,99,235,0.18);
+}
+.navbar-toggler-icon {
+    background-image: none !important;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    position: relative;
+}
+.navbar-toggler-icon::before, .navbar-toggler-icon::after, .navbar-toggler-icon span {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: #fff;
+    border-radius: 2px;
+    margin: 5px 0;
+}
+.navbar-toggler-icon span {
+    margin: 0;
+}
