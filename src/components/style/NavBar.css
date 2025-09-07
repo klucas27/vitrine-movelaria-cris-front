@@ -1,6 +1,7 @@
 .navbar-myedit {
     background: rgb(17, 24, 39);
     min-height: 64px;
+    width: 100vw;
     display: flex;
     align-items: center;
 }
