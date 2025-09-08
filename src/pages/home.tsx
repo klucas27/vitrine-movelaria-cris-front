@@ -5,6 +5,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './style/home.css'
 import CategoryCard from '../components/CategoryCard';
 
+import ProductsList from '../components/ProductsList'
+
 function Home() {
   return (
     <>
@@ -33,6 +35,11 @@ function Home() {
               <CategoryCard title="Banheiros" image="/card-banheiro.png" />
             </div>
           </div>
+        </section>
+
+        <section className="py-5 bg-white">
+          <h2 className="text-center mb-4 home-categories-title">Nossos Moveis já Montados</h2>
+          <ProductsList pagination={false}></ProductsList>
         </section>
       </div>
     </>
