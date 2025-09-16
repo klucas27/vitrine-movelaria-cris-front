@@ -6,9 +6,12 @@ interface ProductsCardsProps {
     imagem_url: string;
     mov_nome: string;
     mov_descricao: string;
+    cor?: string;
+    tipo?: string;
+    material?: string;
 }
 
-const ProductsCards: React.FC<ProductsCardsProps> = ({mov_id, imagem_url, mov_nome, mov_descricao }) => {
+const ProductsCards: React.FC<ProductsCardsProps> = ({ mov_id, imagem_url, mov_nome, mov_descricao, cor, tipo, material }) => {
     return (
         <div>
             <div className="card shadow-sm container-card">
@@ -20,10 +23,17 @@ const ProductsCards: React.FC<ProductsCardsProps> = ({mov_id, imagem_url, mov_no
                         <p className="card-text">{mov_descricao}</p>
                     )}
 
-                    {/* Adicione mais campos conforme necessário */}
+                    {cor && (
+                        <p className="card-text"><strong>Cor:</strong> <span className="cor-produto">{cor}</span></p>
+                    )}
+                    {tipo && (
+                        <p className="card-text"><strong>Tipo:</strong> <span className="tipo-produto">{tipo}</span></p>
+                    )}
+                    {material && (
+                        <p className="card-text"><strong>Material:</strong> <span className="material-produto">{material}</span></p>
+                    )}
                 </div>
             </div>
-
         </div>
     )
 }

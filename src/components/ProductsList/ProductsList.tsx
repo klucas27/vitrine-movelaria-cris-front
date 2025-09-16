@@ -60,6 +60,9 @@ function ProductsList({ pagination = true }: ProductsListProps) {
                             imagem_url={product.imagem_url}
                             mov_nome={product.mov_nome}
                             mov_descricao={product.mov_descricao}
+                            cor={product.cor_cor_id}
+                            tipo={product.tipo_tip_id}
+                            material={product.material_mat_id}
                         />
                     </div>
                 ))}

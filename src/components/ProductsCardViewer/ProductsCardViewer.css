@@ -15,3 +15,16 @@
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.359) !important;
     transform: translateY(-4px) scale(1.04);
 }
+
+.cor-produto {
+    color: #007bff;
+    font-weight: bold;
+}
+.tipo-produto {
+    color: #28a745;
+    font-weight: bold;
+}
+.material-produto {
+    color: #6c757d;
+    font-weight: bold;
+}
