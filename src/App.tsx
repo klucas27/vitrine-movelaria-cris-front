@@ -2,9 +2,9 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/NavBar/NavBar'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Home from './pages/home'
-import Products from './pages/products'
-import Contacts from './pages/contacts'
+import Home from './pages/Home'
+import Products from './pages/Products'
+import Contacts from './pages/Contacts'
 
 function App() {
   return (
