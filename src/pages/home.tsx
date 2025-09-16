@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './style/home.css'
-import CategoryCard from '../components/CategoryCard';
+import CategoryCard from '../components/CategoryCard/CategoryCard';
 
-import ProductsList from '../components/ProductsList'
+import ProductsList from '../components/ProductsList/ProductsList'
 
 function Home() {
   return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import './style/ProductsCardViewer.css'
+import './ProductsCardViewer.css'
 
 interface ProductsCardsProps {
     mov_id: string;

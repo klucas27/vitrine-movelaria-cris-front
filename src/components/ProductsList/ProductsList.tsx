@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useNavigate } from 'react-router-dom';
-import ProductsCards from './ProductsCardViewer';
+import ProductsCards from '../ProductsCardViewer/ProductsCardViewer';
 import axios from 'axios';
 
 const ITEMS_PER_PAGE = 6;

@@ -1,8 +1,8 @@
-import './style/NavBar.css';
+import './NavBar.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { NavLink } from 'react-router-dom';
-import logo from '../logo192.png'; // Importa a imagem
+import logo from '../../logo192.png'; // Importa a imagem
 
 function Navbar() {
   return (
