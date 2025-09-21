@@ -11,6 +11,7 @@ interface ProductsCardsProps {
     material?: string;
 }
 
+
 const ProductsCards: React.FC<ProductsCardsProps> = ({ mov_id, imagem_url, mov_nome, mov_descricao, cor, tipo, material }) => {
     return (
         <div>
@@ -37,5 +38,6 @@ const ProductsCards: React.FC<ProductsCardsProps> = ({ mov_id, imagem_url, mov_n
         </div>
     )
 }
+
 
 export default ProductsCards;

@@ -20,7 +20,7 @@ function ProductsList({ pagination = true }: ProductsListProps) {
 
     useEffect(() => {
             setLoading(true);
-            axios.get(`${process.env.REACT_APP_API_URL || 'http://localhost:3003'}/furniture`)
+            axios.get(`${process.env.REACT_APP_API_URL || 'http://localhost:3001'}/furniture/ativos`)
                 .then((response: { data: any }) => {
                     setProducts(response.data);
                     setLoading(false);
@@ -54,15 +54,15 @@ function ProductsList({ pagination = true }: ProductsListProps) {
         <div className="container mt-0 p-3">
             <div className="row">
                 {currentProducts.map((product: any) => (
-                    <div className="col-md-4 mb-4" key={product.mov_id}>
+                    <div className="col-12 col-sm-6 col-md-4 mb-4 d-flex h-100" key={product.mov_id}>
                         <ProductsCards
-                            mov_id={product.mov_id}
+                            mov_id={product.id}
                             imagem_url={product.imagem_url}
-                            mov_nome={product.mov_nome}
-                            mov_descricao={product.mov_descricao}
-                            cor={product.cor_cor_id}
-                            tipo={product.tipo_tip_id}
-                            material={product.material_mat_id}
+                            mov_nome={product.nome}
+                            mov_descricao={product.descricao}
+                            cor={product.cor}
+                            tipo={product.categoria}
+                            material={product.material}
                         />
                     </div>
                 ))}

@@ -11,8 +11,8 @@ function Home() {
   return (
     <>
       <div className='page-edit'>
-        <section className="position-relative home-hero-section text-white py-0">
-          <div className="container">
+        <section className="position-relative home-hero-section text-white">
+          <div className="container home-selection-child mx-auto">
             <div className="row align-items-center">
               <div className="col-12 col-md-6 mb-4 mb-md-0">
                 <h1>Você Sonha! <br /> E Nós Montamos!</h1>
