@@ -1,74 +1,219 @@
 # Vitrine Movelaria Cris
 
-Este projeto é uma vitrine digital para a Movelaria Cris, desenvolvido com React, Bootstrap e estilização personalizada. O objetivo é apresentar produtos, categorias e informações de contato de forma moderna, responsiva e fácil de navegar.
+Vitrine digital da Movelaria Cris, construída com React + TypeScript, Bootstrap 5 e CSS por componente. Apresenta categorias, produtos e contatos com foco em responsividade e navegação simples.
 
-## Funcionalidades
+## Sumário
 
-- Navegação entre páginas: Home, Produtos, Contato
-- Navbar responsivo e personalizado
-- Seção principal com imagem, chamada e botão para produtos
-- Seção de categorias com cards quadrados, imagem de fundo e título
-- Estilização moderna e responsiva usando Bootstrap e CSS customizado
+- Requisitos
+- Instalação e Execução
+- Scripts Disponíveis
+- Estrutura do Projeto
+- Tecnologias
+- Arquitetura e Padrões
+- Rotas
+- Componentes Principais
+- Estilos e Assets
+- Variáveis de Ambiente
+- Testes
+- Build e Deploy
+- Dicas de Desenvolvimento
+- Contribuição
+- Licença
+- Autor
+
+## Requisitos
+
+- Node.js LTS >= 18
+- npm >= 9
+
+Verifique:
+
+```powershell
+node -v
+npm -v
+```
+
+## Instalação e Execução
+
+1) Instalar dependências:
+
+```powershell
+npm install
+```
+
+2) Rodar em desenvolvimento:
+
+```powershell
+npm start
+```
+
+Acesse http://localhost:3000
+
+3) Testes:
+
+```powershell
+npm test
+```
+
+## Scripts Disponíveis
+
+- `npm start` — Dev server (Create React App).
+- `npm run build` — Build de produção em `build/`.
+- `npm test` — Testes com Jest/React Testing Library.
+- `npm run eject` — Expõe configs do CRA (irreversível).
 
 ## Estrutura do Projeto
 
-```
+```text
 public/
   card-banheiro.png
   card-cozinha.png
   card-quarto.png
   card-sala.png
   image-section1-home.png
+  favicon.ico
+  index.html
+  manifest.json
+  robots.txt
   ...
+
 src/
+  .env                      <-- mover para a raiz do projeto (ver Variáveis de Ambiente)
+  App.css
+  App.test.tsx
   App.tsx
+  global.d.ts
+  index.css
+  index.tsx
+  react-app-env.d.ts
+  reportWebVitals.ts
+  setupTests.ts
+
   components/
-    NavBar.tsx
-    CategoryCard.tsx
-    style/
-      NavBar.css
+    CategoryCard/
       CategoryCard.css
+      CategoryCard.tsx
+    NavBar/
+      NavBar.css
+      NavBar.tsx
+    ProductsCardViewer/
+      ProductsCardViewer.css
+      ProductsCardViewer.tsx
+    ProductsList/
+      ProductsList.tsx
+
   pages/
-    home.tsx
-    products.tsx
-    contacts.tsx
-    style/
-      home.css
-  ...
+    Contacts/
+      index.tsx
+    Home/
+      index.tsx
+      style.css
+    Products/
+      index.tsx
 ```
 
-## Tecnologias Utilizadas
+## Tecnologias
 
-- React
-- Bootstrap 5 (CSS e JS)
+- React 18 + TypeScript
+- Bootstrap 5
 - React Router DOM
-- CSS customizado
+- Jest + React Testing Library
+- CSS por componente/página
 
-## Como rodar o projeto
+## Arquitetura e Padrões
 
-1. Instale as dependências:
+- `pages/*` — Páginas mapeadas em rotas.
+- `components/*` — Componentes reutilizáveis.
+- CSS acoplado a cada componente/página para escopo simples.
+- Imagens públicas em `public/` (referencie com path absoluto, ex.: `/image.png`).
+- Tipagens auxiliares em `*.d.ts` quando necessário.
 
-   ```bash
-   npm install
-   ```
+## Rotas
 
-2. Inicie o servidor de desenvolvimento:
+- `/` — Home
+- `/products` — Produtos
+- `/contacts` — Contatos
 
-   ```bash
-   npm start
-   ```
+As rotas são definidas no `App.tsx` com `react-router-dom`.
 
-3. Acesse [http://localhost:3000](http://localhost:3000) no navegador.
+## Componentes Principais
 
-## Imagens e Assets
+- `NavBar` — Navegação responsiva com Bootstrap.
+- `CategoryCard` — Card com imagem de fundo e título para categorias.
+- `ProductsCardViewer` — Viewer de cards de produtos.
+- `ProductsList` — Lista de produtos.
 
-Coloque as imagens dos cards de categoria e da seção principal na pasta `public/` conforme os exemplos acima.
+## Estilos e Assets
 
-## Personalização
+- Estilos por componente (ex.: `components/CategoryCard/CategoryCard.css`) e por página (`pages/Home/style.css`).
+- Utilize utilitários do Bootstrap 5 quando possível.
+- Coloque imagens em `public/` e use em JSX: `<img src="/image-section1-home.png" alt="..." />`.
 
-- Para alterar categorias, edite o componente `CategoryCard` e os props em `home.tsx`.
-- Para mudar estilos, edite os arquivos CSS em `src/components/style/` e `src/pages/style/`.
+## Variáveis de Ambiente
 
-## Sobre
+- No Create React App, variáveis expostas ao front devem começar com `REACT_APP_`.
+- O arquivo `.env` deve ficar na raiz do projeto (não dentro de `src/`).
 
-Desenvolvido por Kresley Lucas para apresentar produtos e serviços de forma digital e responsiva.
+Exemplo de `.env` na raiz:
+
+```dotenv
+# ./.env
+REACT_APP_API_URL=https://api.exemplo.com
+REACT_APP_FEATURE_FLAGS=products,categories
+PORT=3000
+```
+
+Após alterações no `.env`, reinicie `npm start`.
+
+## Testes
+
+- Test runner: Jest + React Testing Library (configs padrão do CRA).
+- Testes próximos aos arquivos (ex.: `App.test.tsx`).
+- Modo watch:
+
+```powershell
+npm test
+```
+
+## Build e Deploy
+
+1) Gerar build:
+
+```powershell
+npm run build
+```
+
+2) Publicar:
+
+- Vercel/Netlify: comando `npm run build`, diretório `build/`.
+- Hospedagem estática (S3/GCP/Azure): suba o conteúdo de `build/`.
+- GitHub Pages: use `gh-pages` ou workflow de CI para publicar o `build/`.
+
+Dicas:
+
+- Defina `homepage` no `package.json` se publicar em subpath.
+- Ajuste `BrowserRouter` vs `HashRouter` conforme regras de reescrita da hospedagem.
+
+## Dicas de Desenvolvimento
+
+- Reaproveite componentes e utilitários do Bootstrap.
+- Padronize classes CSS e evite estilos globais conflitando.
+- Crie constantes utilitárias para paths e textos repetidos.
+- Ao adicionar novas páginas, exporte em `pages/NovaPagina/index.tsx` e inclua no `App.tsx`.
+
+## Contribuição
+
+- Use branches por feature/bugfix.
+- Commits pequenos e descritivos.
+- PRs com descrição clara, prints (quando UI) e passos de teste.
+- Atualize/adicione testes ao mudar comportamento.
+
+## Licença
+
+Este projeto é de propriedade exclusiva da Codexus. O uso, cópia, modificação, distribuição ou qualquer outra forma de aproveitamento do código-fonte ou dos recursos aqui presentes é proibido sem autorização expressa do autor.
+
+Todos os direitos reservados.
+
+## Autor
+
+Desenvolvido por Codexus.

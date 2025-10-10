@@ -1,0 +1,5 @@
+## Licença
+
+Este projeto é de propriedade exclusiva de Codexus. O uso, cópia, modificação, distribuição ou qualquer outra forma de aproveitamento do código-fonte ou dos recursos aqui presentes é proibido sem autorização expressa do autor.
+
+Todos os direitos reservados.
