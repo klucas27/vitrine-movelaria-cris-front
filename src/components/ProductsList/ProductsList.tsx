@@ -49,6 +49,7 @@ function ProductsList({ pagination = true }: ProductsListProps) {
 
     if (loading) return <div className="text-center">Loading...</div>;
     if (error) return <div className="text-center text-danger">Error: {error}</div>;
+    if (!products.length) return <div className="text-center text-muted">Nenhum produto cadastrado no momento.</div>;
 
     return (
         <div className="container mt-0 p-3">
@@ -68,7 +69,7 @@ function ProductsList({ pagination = true }: ProductsListProps) {
                 ))}
             </div>
             
-            {/* Bootstrap Pagination */}
+            {/* Bootstrap Pagination
             {pagination && totalPages > 1 && (
                 <nav>
                     <ul className="pagination justify-content-center">
@@ -99,7 +100,7 @@ function ProductsList({ pagination = true }: ProductsListProps) {
                         </li>
                     </ul>
                 </nav>
-            )}
+            )} */}
 
             {/* Button to view all products when pagination is false */}
             {!pagination && products.length > ITEMS_NO_PAGINATION && (
