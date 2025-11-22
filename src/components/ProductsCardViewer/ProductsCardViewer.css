@@ -1,7 +1,7 @@
 .container-card {
     background-color: rgb(255, 255, 255) !important;
     border-radius: 1rem;
-    height: 40rem;
+    height: 35rem;
     width: 100%;
     margin-bottom: 16px;
     padding: 0;
@@ -17,7 +17,7 @@
 
 .container-card:hover {
     /* background-color: aquamarine !important; */
-    height: 38.5rem;
+    height: 34.5rem;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.359) !important;
     transform: translateY(-2px) scale(1.03);
 }
@@ -40,15 +40,14 @@
 @media (max-width: 576px) {
 
     .container-card {
-        height: 45rem;
+        height: 28rem; /* Reduzido de 45rem para 28rem */
         width: 100%;
         margin-bottom: 16px;
         padding: 0;
     }
 
     .container-card:hover {
-        /* background-color: aquamarine !important; */
-        height: 44.9rem;
+        height: 27.8rem; /* Ajuste proporcional */
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.359) !important;
         transform: translateY(-2px) scale(1.01);
     }
@@ -60,7 +59,7 @@
 
     .img-card-mod {
         width: 100%;
-        height: auto;
+        height: 180px; /* Limita a altura da imagem no mobile */
         object-fit: cover;
     }
 
