@@ -69,7 +69,7 @@ function ProductsList({ pagination = true }: ProductsListProps) {
         <div className="container mt-0 p-3">
             <div className="row">
                 {currentProducts.map((product: any) => (
-                    <div className="col-12 col-sm-6 col-md-4 mb-4 d-flex h-100" key={product.mov_id}>
+                    <div className="col-12 col-sm-6 col-md-4 mb-4 d-flex h-100" key={product.id}>
                         <div style={{ width: '100%' }} onClick={() => handleProductClick(product)}>
                             <ProductsCards
                                 mov_id={product.id}
@@ -96,7 +96,6 @@ function ProductsList({ pagination = true }: ProductsListProps) {
                             <div className="modal-body">
                                 <img src={selectedProduct.imagem_url} alt={selectedProduct.nome} className="img-fluid mb-3" />
                                 <p><strong>Descrição:</strong> {selectedProduct.descricao}</p>
-                                <p><strong>Cor:</strong> {selectedProduct.cor}</p>
                                 <p><strong>Categoria:</strong> {selectedProduct.categoria}</p>
                                 <p><strong>Material:</strong> {selectedProduct.material}</p>
                             </div>

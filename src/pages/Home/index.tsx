@@ -26,7 +26,7 @@ function Home() {
 
         <section className="py-5 bg-white">
           <div className="container">
-            <h2 className="text-center mb-4 home-categories-title">Categorias</h2>
+            <h2 className="text-center mb-4 home-categories-title">Categorias Que Trabalhamos</h2>
             <div className="d-flex flex-wrap justify-content-center align-items-center gap-4">
               <CategoryCard title="Cozinhas" image="/card-cozinha.png" />
               <CategoryCard title="Quartos" image="/card-quarto.png" />
