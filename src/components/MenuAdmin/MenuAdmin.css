@@ -1,0 +1,16 @@
+.menu-admin {
+  width: 100%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  /* border-radius: 8px; */
+}
+.menu-admin .navbar-brand {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.menu-admin .nav-link {
+  color: #fff;
+  transition: color 0.2s;
+}
+.menu-admin .nav-link:hover {
+  color: #ffc107;
+}
